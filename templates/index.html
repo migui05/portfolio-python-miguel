@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de programación en Python de Miguel García Castañeda.">
+  <title>Miguel García Castañeda | Portfolio Python</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <nav class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">M</span> Miguel García Castañeda</a>
+    <div class="nav-links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#calculadora">Demo interactiva</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> PORTFOLIO · PYTHON</p>
+        <h1>Aprendiendo a convertir ideas en <span>código útil.</span></h1>
+        <p class="lead">Soy Miguel, estudiante de Sistemas Microinformáticos y Redes y programador en formación. Este espacio reúne proyectos prácticos y pequeños experimentos que puedo enseñar, probar y mejorar.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#proyectos">Ver proyectos <span aria-hidden="true">↘</span></a>
+          <a class="button secondary" href="#calculadora">Probar calculadora</a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>Python</strong><span>Proyectos de consola</span></div>
+          <div><strong>HTML · CSS</strong><span>Fundamentos web</span></div>
+          <div><strong>Inglés C1</strong><span>Comunicación avanzada</span></div>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <div class="portrait-glow"></div>
+        <img src="{{ url_for('static', filename='miguel.jpg') }}" alt="Fotografía de Miguel García Castañeda">
+        <div class="portrait-caption">
+          <span class="caption-dot"></span>
+          <div><strong>Miguel García Castañeda</strong><small>Estudiante · Python</small></div>
+        </div>
+        <div class="floating-code"><span>def</span> aprender():<br>&nbsp;&nbsp;return <em>"seguir mejorando"</em></div>
+      </div>
+    </section>
+
+    <section class="section about-section">
+      <div class="section-heading">
+        <p class="eyebrow">01 / PERFIL</p>
+        <h2>Una base técnica, <span>curiosidad constante.</span></h2>
+      </div>
+      <div class="about-grid">
+        <p class="large-copy">Estoy desarrollando mis habilidades de programación mediante ejercicios y pequeños programas. Me interesa entender cómo funcionan las cosas, resolver errores y llevar cada práctica un poco más lejos.</p>
+        <div class="about-details">
+          <div><span class="detail-label">Formación actual</span><strong>Grado Medio en Sistemas Microinformáticos y Redes</strong><small>CIFP Santa Catalina · 2023 – Actualmente</small></div>
+          <div><span class="detail-label">Herramientas y conocimientos</span><strong>Python básico, HTML5, CSS3, Windows, Linux y redes</strong></div>
+          <div><span class="detail-label">Idiomas</span><strong>Español nativo · Inglés avanzado C1</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="proyectos">
+      <div class="section-heading">
+        <p class="eyebrow">02 / PROYECTOS</p>
+        <h2>Pequeños proyectos, <span>aprendizaje real.</span></h2>
+        <p class="section-subtitle">Seleccionados a partir de los archivos de práctica compartidos. Se describen como proyectos en desarrollo cuando corresponde.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-top"><span class="project-number">01</span><span class="project-type">INTERACTIVO</span></div>
+          <div class="project-icon">∑</div>
+          <h3>Calculadora matemática</h3>
+          <p>Una versión web de la calculadora de consola. Permite realizar operaciones y muestra el resultado calculado por Python en el servidor.</p>
+          <div class="project-tags"><span>Python</span><span>Flask</span><span>HTML/CSS/JS</span></div>
+          <a class="text-link" href="#calculadora">Probar demo <span>↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">02</span><span class="project-type">EN DESARROLLO</span></div>
+          <div class="project-icon">€</div>
+          <h3>Calculadora de nóminas</h3>
+          <p>Script inicial para introducir un salario base y registrar pluses salariales y no salariales. Aún no calcula una nómina completa.</p>
+          <div class="project-tags"><span>Python</span><span>Entrada de datos</span><span>Listas</span></div>
+          <span class="project-status">Versión de aprendizaje</span>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">03</span><span class="project-type">PRÁCTICAS</span></div>
+          <div class="project-icon">{ }</div>
+          <h3>Ejercicios de Python básico</h3>
+          <p>Repositorio de prácticas guiadas para afianzar los fundamentos del lenguaje. Los conceptos básicos se agrupan aquí, sin presentarlos como proyectos independientes.</p>
+          <div class="project-tags"><span>Python</span><span>Práctica</span></div>
+          <span class="project-status">Colección de ejercicios</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculator-section" id="calculadora">
+      <div class="section-heading">
+        <p class="eyebrow">03 / PRUÉBALO</p>
+        <h2>Calculadora <span>en funcionamiento.</span></h2>
+        <p class="section-subtitle">La interfaz está en el navegador, pero las operaciones se calculan con Python en el backend Flask.</p>
+      </div>
+      <div class="calculator-layout">
+        <div class="calculator-info">
+          <div class="live-indicator"><span></span> DEMO INTERACTIVA</div>
+          <h3>De la práctica de consola a una aplicación web.</h3>
+          <p>Esta demo reutiliza la idea de mi proyecto original y añade una interfaz sencilla, validación de entradas y mensajes de error para operaciones no válidas.</p>
+          <ul>
+            <li>Operaciones básicas y potencia</li>
+            <li>Raíces cuadradas y cúbicas</li>
+            <li>Factorial y media de dos números</li>
+          </ul>
+        </div>
+        <form class="calculator" id="calc-form">
+          <div class="calc-header"><span class="calc-lights"><i></i><i></i><i></i></span><span>PYTHON_CALC.EXE</span></div>
+          <label for="operation">Operación</label>
+          <select id="operation" name="operation">
+            <option value="suma">Suma · a + b</option>
+            <option value="resta">Resta · a − b</option>
+            <option value="multiplicacion">Multiplicación · a × b</option>
+            <option value="division">División · a ÷ b</option>
+            <option value="potencia">Potencia · a elevado a b</option>
+            <option value="media">Media de dos números</option>
+            <option value="raiz_cuadrada">Raíz cuadrada de a</option>
+            <option value="raiz_cubica">Raíz cúbica de a</option>
+            <option value="factorial">Factorial de a</option>
+          </select>
+          <div class="number-fields">
+            <div><label for="number-a">Número a</label><input id="number-a" name="a" type="number" step="any" placeholder="Ej. 12" required></div>
+            <div id="second-number"><label for="number-b">Número b</label><input id="number-b" name="b" type="number" step="any" placeholder="Ej. 4"></div>
+          </div>
+          <button class="button primary calc-button" type="submit">Calcular resultado <span>→</span></button>
+          <div class="result" id="result" role="status" aria-live="polite"><span class="result-label">RESULTADO</span><strong>Esperando operación…</strong></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section education-section">
+      <div class="section-heading">
+        <p class="eyebrow">04 / FORMACIÓN</p>
+        <h2>Construyendo mis <span>cimientos.</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><span class="timeline-dot"></span><div><span class="timeline-date">2023 – ACTUALMENTE</span><h3>Grado Medio en Sistemas Microinformáticos y Redes</h3><p>CIFP Santa Catalina · Hardware, soporte informático, Windows/Linux y redes.</p></div></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div><span class="timeline-date">2017 – 2021</span><h3>ESO · Programa bilingüe</h3><p>IES Vela Zanetti · Formación impartida en inglés.</p></div></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <p class="eyebrow">¿HABLAMOS?</p>
+      <h2>Siempre abierto a <span>aprender y colaborar.</span></h2>
+      <p>Si quieres conocer más sobre mis prácticas o contactar conmigo, puedes escribirme por correo.</p>
+      <a class="button primary" href="mailto:miguel.garcas.1@hotmail.com">miguel.garcas.1@hotmail.com <span>↗</span></a>
+      <div class="contact-meta"><span>Aranda de Duero, Burgos</span><span>660 519 744</span></div>
+    </section>
+  </main>
+  <footer><span>© Miguel García Castañeda</span><span>Hecho con Python · Flask · CSS</span></footer>
+
+<script>
+const operation = document.getElementById("operation");
+const secondNumber = document.getElementById("second-number");
+const numberB = document.getElementById("number-b");
+const form = document.getElementById("calc-form");
+const result = document.getElementById("result");
+const unaryOperations = new Set(["raiz_cuadrada", "raiz_cubica", "factorial"]);
+
+function updateInputs() {
+  const unary = unaryOperations.has(operation.value);
+  secondNumber.hidden = unary;
+  numberB.required = !unary;
+  numberB.disabled = unary;
+  if (unary) numberB.value = "";
+}
+operation.addEventListener("change", updateInputs);
+updateInputs();
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const submitButton = form.querySelector("button[type=submit]");
+  submitButton.disabled = true;
+  submitButton.innerHTML = "Calculando…";
+  result.classList.remove("error");
+  result.querySelector("strong").textContent = "Ejecutando operación en Python…";
+  const payload = {
+    operacion: operation.value,
+    a: document.getElementById("number-a").value,
+    b: unaryOperations.has(operation.value) ? null : numberB.value
+  };
+  try {
+    const response = await fetch("/api/calcular", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(payload)
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || "No se pudo realizar la operación.");
+    result.querySelector("strong").textContent = data.resultado;
+  } catch (error) {
+    result.classList.add("error");
+    result.querySelector("strong").textContent = error.message || "No se pudo conectar con Python.";
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = 'Calcular resultado <span>→</span>';
+  }
+});
+</script>
+</body>
+</html>
